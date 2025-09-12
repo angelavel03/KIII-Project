@@ -61,7 +61,7 @@ function App() {
                     {response.message}
                 </div>
             )}
-            <h1>Notes App</h1>
+            <h1>Notes Application</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mt-3">
                     <label className="form-label">Title</label>
