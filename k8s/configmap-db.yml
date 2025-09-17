@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+  namespace: notesapp
+data:
+  POSTGRES_DB: "notesdb"
+  POSTGRES_USER: "postgre"
