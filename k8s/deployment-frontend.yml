@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: angelavel/frontend:latest
+          image: angelavel/notes-frontend:latest
           ports:
             - containerPort: 80

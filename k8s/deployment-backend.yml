@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: angelavel/backend:latest
+          image: angelavel/notes-backend:latest
           ports:
             - containerPort: 8080
           envFrom:
