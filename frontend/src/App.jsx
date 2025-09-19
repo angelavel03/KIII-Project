@@ -14,7 +14,7 @@ function App() {
 
     useEffect(() => {
         // runs once on component mount
-        fetch("http://localhost:8080/api/notes")
+        fetch("/api/notes")
             .then((res) => res.json())
             .then((data) => setNotes(data))
             .catch(console.error);
@@ -28,7 +28,7 @@ function App() {
     };
 
     const handleDelete = async (e) => {
-        await fetch("http://localhost:8080/api/notes/delete/" + e.target.id, { method: "DELETE" });
+        await fetch("/api/notes/delete/" + e.target.id, { method: "DELETE" });
         setNotes((prev) => prev.filter(note => note.id !== e.target.id));
     }
 
@@ -36,7 +36,7 @@ function App() {
         e.preventDefault();
 
         try {
-            const res = await fetch("http://localhost:8080/api/notes/add", {
+            const res = await fetch("/api/notes/add", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
