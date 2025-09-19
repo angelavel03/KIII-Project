@@ -97,7 +97,7 @@ function App() {
                     </tr>
                 </thead>
                 <tbody>
-                    { notes.map((note, index) => (
+                    { notes.length > 0 && notes.map((note, index) => (
                         <tr key={index}>
                             <td>{ note.title }</td>
                             <td>{ note.content }</td>
